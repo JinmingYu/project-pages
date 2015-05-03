@@ -5,7 +5,18 @@ description: "People contributing to this Project"
 header-img: "img/about-bg.jpg"
 ---
 
-
+<ul class="projects">
+  {% for post in site.collaborators %}
+  <li>
+    <article>
+      <div class="project-title"><h1>{{ post.title}}<h1></div>
+        <br />
+        <br />
+      <p class="content-text">{{post.content}}</p>
+    </article>
+  </li>
+  {% endfor %}
+</ul>
 
 <p></p>
 
