@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Collaborators
+title: Members
 excerpt: "The MINED Group @ Georgia Tech"
 search_omit: false
 ---
