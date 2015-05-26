@@ -7,7 +7,7 @@ tags: faculty # here write either ug,grad,post,faculty  ug is undergraduate, gra
 author:
   name: Surya Kalidindi
   role: Professor 
-  image: /mined-gatech.github.io/images/avatars/Kalidindi.png
+  image: /project-pages/images/avatars/Kalidindi.png
   url: http://www.me.gatech.edu/faculty/kalidindi # Optional
 ---
 

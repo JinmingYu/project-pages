@@ -7,5 +7,5 @@ tags: grad # here write either ug,grad,post,faculty  ug is undergraduate, grad s
 author:
   name: David Brough
   role: Data Scientist / Material Informatics 
-  image: /mined-gatech.github.io/images/avatars/no-male.png
+  image: /project-pages/images/avatars/no-male.png
 ---

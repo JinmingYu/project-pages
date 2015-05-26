@@ -7,7 +7,7 @@ tags: grad # here write either ug,grad,post,faculty  ug is undergraduate, grad s
 author:
   name: Jordan Weaver
   role: Experiments/Characterization 
-  image: /mined-gatech.github.io/images/avatars/jordan.png
+  image: /project-pages/images/avatars/jordan.png
   linkedin: jordan-weaver/12/aa8/a47 # Optional
   github: jsweaver # Optional
 

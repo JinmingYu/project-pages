@@ -7,5 +7,5 @@ tags: grad # here write either ug,grad,post,faculty  ug is undergraduate, grad s
 author:
   name: Alicia White
   role: Experiments
-  image: /mined-gatech.github.io/images/avatars/no-female.png
+  image: /project-pages/images/avatars/no-female.png
 ---
