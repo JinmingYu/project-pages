@@ -2,7 +2,7 @@
 layout: bio
 
 categories: members
-tags: faculty # here write either ug,grad,post,faculty  ug is undergraduate, grad self explanatory, post is for post docs and visiting professors
+tags: ug # here write either ug,grad,post,faculty  ug is undergraduate, grad self explanatory, post is for post docs and visiting professors
 
 author:
   name: Surya Kalidindi
