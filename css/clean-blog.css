@@ -395,3 +395,16 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+.post-list .entry-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.71429;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    display: none
+}
+@media screen and (min-width: 48em) {
+    .post-list .entry-date {
+        display: inline
+    }
+}
