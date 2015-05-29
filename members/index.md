@@ -68,8 +68,11 @@ search_omit: false
 	{% for post in site.posts %} 
 		{% if post.categories contains 'members' %}{% if post.tags contains 'grad' %}
 			<div>
-				{% if post.author.image %}<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">{% endif %}
-					<article style="margin:40px; padding:0">{% assign content = post.content | strip_newlines %}
+				{% if post.author.image %}
+					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
+				{% endif %}
+					<article style="margin:40px; padding:0">
+						{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
 							<a>
 								<b>{{ post.author.name }}</b>
@@ -81,6 +84,7 @@ search_omit: false
 									<span class="excerpt">{{ post.author.role }}</span>
 								{% endif %}
 							</a>
+						{% endif %}
 					</article>
 			</div>
 		{% endif %}{% endif %}
