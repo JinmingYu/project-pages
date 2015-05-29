@@ -81,7 +81,7 @@ search_omit: false
 									<span class="excerpt">{{ post.author.role }}</span>
 								{% endif %}
 							</a>
-						{% else %}
+<!-- 						{% else %}
 							<a href="{{ site.url }}{{ post.url }}">
 								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
@@ -92,7 +92,7 @@ search_omit: false
 									<span class="excerpt">{{ post.author.role }}</span>
 								{% endif %}
 							</a>
-						{% endif %}
+						{% endif %} -->
 					</article>
 			</div>
 		{% endif %}{% endif %}
