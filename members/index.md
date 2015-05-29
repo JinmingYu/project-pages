@@ -69,21 +69,13 @@ search_omit: false
 		{% if post.categories contains 'members' %}{% if post.tags contains 'grad' %}
 			<div>
 				{% if post.author.image %}
-					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
+				    <img src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
-					<article style="margin:40px; padding:0">
-						{% assign content = post.content | strip_newlines %}
+					<article style="margin:40px; padding:0">{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a>
-								<b>{{ post.author.name }}</b>
-								<span class="entry-date">
-									<time datetime="{{ post.date | date_to_xmlschema }}">
-									{{ post.date | date: "%B %d, %Y" }}</time>
-								</span>
-								{% if post.author.role %} 
-									<span class="excerpt">{{ post.author.role }}</span>
-								{% endif %}
-							</a>
+						<a><b>{{ post.author.name }}</b><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.author.role %} <span class="excerpt">{{ post.author.role }}</span>{% endif %}</a>
+						{% else %}
+						<a href="{{ site.url }}{{ post.url }}"><b>{{ post.author.name }}</b><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.author.role %} <span class="excerpt">{{ post.author.role }}</span>{% endif %}</a>
 						{% endif %}
 					</article>
 			</div>
