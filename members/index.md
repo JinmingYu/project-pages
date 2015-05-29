@@ -81,18 +81,6 @@ search_omit: false
 									<span class="excerpt">{{ post.author.role }}</span>
 								{% endif %}
 							</a>
-<!-- 						{% else %}
-							<a href="{{ site.url }}{{ post.url }}">
-								<b>{{ post.author.name }}</b>
-								<span class="entry-date">
-									<time datetime="{{ post.date | date_to_xmlschema }}">
-									{{ post.date | date: "%B %d, %Y" }}</time>
-								</span>
-								{% if post.author.role %} 
-									<span class="excerpt">{{ post.author.role }}</span>
-								{% endif %}
-							</a>
-						{% endif %} -->
 					</article>
 			</div>
 		{% endif %}{% endif %}
