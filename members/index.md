@@ -23,7 +23,9 @@ search_omit: false
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
 							<a href="{{ post.url | prepend: site.baseurl }}">
-								<b>{{ post.author.name }}</b>
+<!-- 							why doesn's it work here but works in the main page?
+also, instead of manully push the date, is there a better sollution?
+ -->								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
