@@ -98,7 +98,6 @@ search_omit: false
 					</article>
 			</div>
 		{% endif %}{% endif %}
-		<br>
 	{% endfor %}
 	</table>
 	<br>
