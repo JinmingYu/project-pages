@@ -22,7 +22,8 @@ search_omit: false
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a><b>{{ post.author.name }}</b>
+							<a href="{{ post.url | prepend: site.baseurl }}">
+								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
@@ -66,7 +67,8 @@ search_omit: false
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a><b>{{ post.author.name }}</b>
+							<a href="{{ post.url | prepend: site.baseurl }}">
+							<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
@@ -132,7 +134,8 @@ search_omit: false
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a><b>{{ post.author.name }}</b>
+							<a href="{{ post.url | prepend: site.baseurl }}">
+							<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
@@ -177,7 +180,8 @@ search_omit: false
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a><b>{{ post.author.name }}</b>
+							<a href="{{ post.url | prepend: site.baseurl }}">
+								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
