@@ -14,8 +14,7 @@ search_omit: false
 		{% if post.categories contains 'members' %}{% if post.tags contains 'faculty' %}
 		<tr>
 		<td valign="middle">
-<!-- 			<li>
- -->			{% if post.author.image %}
+			{% if post.author.image %}
 					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
 		</td>
@@ -47,16 +46,56 @@ search_omit: false
 							</a>
 						{% endif %}
 					</article>
-<!-- 			</li>
- -->		</td>
+		</td>
 		</tr>
 		{% endif %}{% endif %}
 	{% endfor %}
 	</table>
 	
 	<h1> Post-Doc and Visiting Faculty </h1>
-
 	<table>
+	{% for post in site.posts %} 
+		{% if post.categories contains 'members' %}{% if post.tags contains 'post' %}
+		<tr>
+		<td valign="middle">
+			{% if post.author.image %}
+					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
+				{% endif %}
+		</td>
+		<td>
+				<article style="margin:40px; padding:0">
+					{% assign content = post.content | strip_newlines %}
+						{% if content == ""  %}
+							<a><b>{{ post.author.name }}</b>
+								<span class="entry-date">
+									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+								</span>
+								{% if post.author.role %} 
+									<span class="excerpt">
+										{{ post.author.role }}
+									</span>
+								{% endif %}
+							</a>
+						{% else %}
+							<a href="{{ site.url }}{{ post.url }}">
+								<b>{{ post.author.name }}</b>
+								<span class="entry-date">
+									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+								</span>
+								{% if post.author.role %} 
+									<span class="excerpt">
+										{{ post.author.role }}
+									</span>
+								{% endif %}
+							</a>
+						{% endif %}
+					</article>
+		</td>
+		</tr>
+		{% endif %}{% endif %}
+	{% endfor %}
+	</table>
+<!-- 	<table>
 	{% for post in site.posts %} 
 		{% if post.categories contains 'members' %}{% if post.tags contains 'post' %}
 		<tr>
@@ -76,27 +115,31 @@ search_omit: false
 		{% endif %}{% endif %}
 
 	{% endfor %}
-	</table>
+	</table> -->
 	
 	<h1> Graduate Students </h1>
 	
 	<table>
 	{% for post in site.posts %} 
 		{% if post.categories contains 'members' %}{% if post.tags contains 'grad' %}
-			<div>
-				{% if post.author.image %}
-				    <img src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
+		<tr>
+		<td valign="middle">
+			{% if post.author.image %}
+					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
-					<article style="margin:40px; padding:0">
-					    {% assign content = post.content | strip_newlines %}
+		</td>
+		<td>
+				<article style="margin:40px; padding:0">
+					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a>
-								<b>{{ post.author.name }}</b>
+							<a><b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
 								{% if post.author.role %} 
-									<span class="excerpt">{{ post.author.role }}</span>
+									<span class="excerpt">
+										{{ post.author.role }}
+									</span>
 								{% endif %}
 							</a>
 						{% else %}
@@ -106,16 +149,18 @@ search_omit: false
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
 								{% if post.author.role %} 
-									<span class="excerpt">{{ post.author.role }}</span>
+									<span class="excerpt">
+										{{ post.author.role }}
+									</span>
 								{% endif %}
 							</a>
 						{% endif %}
 					</article>
-			</div>
+		</td>
+		</tr>
 		{% endif %}{% endif %}
 	{% endfor %}
 	</table>
-	<br>
 	
 	<h1> Undergraduate Students </h1>
 	
@@ -124,33 +169,38 @@ search_omit: false
 		{% if post.categories contains 'members' %}{% if post.tags contains 'ug' %}
 		<tr>
 		<td valign="middle">
-			<li>
-				{% if post.author.image %}<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">{% endif %}
-					<article style="margin:40px; padding:0">{% assign content = post.content | strip_newlines %}
+			{% if post.author.image %}
+					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
+				{% endif %}
+		</td>
+		<td>
+				<article style="margin:40px; padding:0">
+					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a>
-								<b>{{ post.author.name }}</b>
+							<a><b>{{ post.author.name }}</b>
 								<span class="entry-date">
-									<time datetime="{{ post.date | date_to_xmlschema }}">
-										{{ post.date | date: "%B %d, %Y" }}</time>
+									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
 								{% if post.author.role %} 
-									<span class="excerpt">{{ post.author.role }}</span>
+									<span class="excerpt">
+										{{ post.author.role }}
+									</span>
 								{% endif %}
 							</a>
 						{% else %}
 							<a href="{{ site.url }}{{ post.url }}">
 								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
-									<time datetime="{{ post.date | date_to_xmlschema }}">
-										{{ post.date | date: "%B %d, %Y" }}</time>
+									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
 								</span>
 								{% if post.author.role %} 
-									<span class="excerpt">{{ post.author.role }}</span>
-								{% endif %}</a>
+									<span class="excerpt">
+										{{ post.author.role }}
+									</span>
+								{% endif %}
+							</a>
 						{% endif %}
 					</article>
-			</li>
 		</td>
 		</tr>
 		{% endif %}{% endif %}
