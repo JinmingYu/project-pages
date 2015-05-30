@@ -59,6 +59,7 @@ search_omit: false
 		</td>
 		</tr>
 		{% endif %}{% endif %}
+
 	{% endfor %}
 	</table>
 	
@@ -71,17 +72,36 @@ search_omit: false
 				{% if post.author.image %}
 				    <img src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
-					<article style="margin:40px; padding:0">{% assign content = post.content | strip_newlines %}
+					<article style="margin:40px; padding:0">
+					    {% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-						<a><b>{{ post.author.name }}</b><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.author.role %} <span class="excerpt">{{ post.author.role }}</span>{% endif %}</a>
+							<a>
+								<b>{{ post.author.name }}</b>
+								<span class="entry-date">
+									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+								</span>
+								{% if post.author.role %} 
+									<span class="excerpt">{{ post.author.role }}</span>
+								{% endif %}
+							</a>
 						{% else %}
-						<a href="{{ site.url }}{{ post.url }}"><b>{{ post.author.name }}</b><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.author.role %} <span class="excerpt">{{ post.author.role }}</span>{% endif %}</a>
+							<a href="{{ site.url }}{{ post.url }}">
+								<b>{{ post.author.name }}</b>
+								<span class="entry-date">
+									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+								</span>
+								{% if post.author.role %} 
+									<span class="excerpt">{{ post.author.role }}</span>
+								{% endif %}
+							</a>
 						{% endif %}
 					</article>
 			</div>
 		{% endif %}{% endif %}
+		<br>
 	{% endfor %}
 	</table>
+	<br>
 	
 	<h1> Undergraduate Students </h1>
 	
