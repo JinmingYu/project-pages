@@ -6,7 +6,8 @@ description: "A Collaborative Research Blog Tool"
 {% for post in paginator.posts %}{% if post.categories contains 'members' %}{% else %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
+        <h2 class="post-title">
+            {{ post.title }}
         </h2>
         {% if post.subtitle %}
         <h3 class="post-subtitle">
@@ -21,7 +22,7 @@ description: "A Collaborative Research Blog Tool"
 {% endfor %}
 
 <!-- Pager -->
-{% if paginator.total_pages > 1 %}{% if post.categories contains 'members' %}{% else %}
+{% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
@@ -34,5 +35,4 @@ description: "A Collaborative Research Blog Tool"
     </li>
     {% endif %}
 </ul>
-{% endif %}
 {% endif %}
