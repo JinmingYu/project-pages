@@ -403,7 +403,9 @@ body {
     text-transform: uppercase;
     display: none
 }
-
+.entry-date {
+  float:right;
+}
 @media screen and (min-width: 48em) {
     .post-list .entry-date {
         display: inline
