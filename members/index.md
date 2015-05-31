@@ -18,7 +18,7 @@ search_omit: false
 					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
 		</td>
-		<td>
+		<td style="width:100%">
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
@@ -65,7 +65,7 @@ also, instead of manully push the date, is there a better sollution?
 					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
 		</td>
-		<td>
+		<td style="width:100%">
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
@@ -132,7 +132,7 @@ also, instead of manully push the date, is there a better sollution?
 					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
 		</td>
-		<td>
+		<td style="width:100%">
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
@@ -178,7 +178,7 @@ also, instead of manully push the date, is there a better sollution?
 					<img data-big="big-image.jpg" src="{{ post.author.image }}" style="float: left; height: 125px; border-radius: 50%; border: 25px solid transparent">
 				{% endif %}
 		</td>
-		<td>
+		<td style="width:100%">
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
