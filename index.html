@@ -3,7 +3,7 @@ layout: page
 description: "A Collaborative Research Blog Tool"
 ---
 <!-- for some reason, all the posts appear  -->
-{% for post in paginator.posts %}
+{% for post in paginator.posts %}{% if post.category != members %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -17,6 +17,7 @@ description: "A Collaborative Research Blog Tool"
     <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
+{% endif %}
 {% endfor %}
 
 <!-- Pager -->
