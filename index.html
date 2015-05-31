@@ -3,7 +3,7 @@ layout: page
 description: "A Collaborative Research Blog Tool"
 ---
 <!-- for some reason, all the posts appear  -->
-{% for post in paginator.posts %}{% if post.categories != members %}
+{% for post in site.posts %}{% if post.categories != members %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -21,7 +21,7 @@ description: "A Collaborative Research Blog Tool"
 {% endfor %}
 
 <!-- Pager -->
-{% if paginator.total_pages > 1 %}{% if post.categories != members %}
+{% if site.total_pages > 1 %}{% if post.categories != members %}
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
