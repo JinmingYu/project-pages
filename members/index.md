@@ -69,7 +69,7 @@ also, instead of manully push the date, is there a better sollution?
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a href="{{ post.url | prepend: site.baseurl }}">
+							<a>
 							<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -81,7 +81,7 @@ also, instead of manully push the date, is there a better sollution?
 								{% endif %}
 							</a>
 						{% else %}
-							<a href="{{ site.url }}{{ post.url }}">
+							<a href="{{ post.url | prepend: site.baseurl }}">
 								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -136,7 +136,7 @@ also, instead of manully push the date, is there a better sollution?
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a href="{{ post.url | prepend: site.baseurl }}">
+							<a>
 							<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -148,7 +148,7 @@ also, instead of manully push the date, is there a better sollution?
 								{% endif %}
 							</a>
 						{% else %}
-							<a href="{{ site.url }}{{ post.url }}">
+							<a href="{{ post.url | prepend: site.baseurl }}">
 								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -182,7 +182,7 @@ also, instead of manully push the date, is there a better sollution?
 				<article style="margin:40px; padding:0">
 					{% assign content = post.content | strip_newlines %}
 						{% if content == ""  %}
-							<a href="{{ post.url | prepend: site.baseurl }}">
+							<a>
 								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -194,7 +194,7 @@ also, instead of manully push the date, is there a better sollution?
 								{% endif %}
 							</a>
 						{% else %}
-							<a href="{{ site.url }}{{ post.url }}">
+							<a href="{{ post.url | prepend: site.baseurl }}">
 								<b>{{ post.author.name }}</b>
 								<span class="entry-date">
 									<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
