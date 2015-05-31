@@ -1,7 +1,7 @@
 ---
 layout:     slide
 title:      Presentation Headline
-date:       2015-01-01 12:00:00
+date:       2015-06-01 12:00:00
 author:     Materials Innovation
 categories: blog
 theme:		blood # default/beige/blood/moon/night/serif/simple/sky/solarized
