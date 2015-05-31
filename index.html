@@ -3,7 +3,7 @@ layout: page
 description: "A Collaborative Research Blog Tool"
 ---
 <!-- for some reason, all the posts appear  -->
-{% for post in paginator.posts %}{% if post.categories contains 'members' %}{% else %}
+{% for post in paginator.posts %}{% if post.categories contains 'blog' %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
