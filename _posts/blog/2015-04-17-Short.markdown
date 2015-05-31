@@ -3,7 +3,7 @@ layout:     slide
 title:      Brief Introduction
 date:       2015-04-17 12:00:00
 author:     Ahmet Cecen
-
+categories: blog
 theme:		blood # default/beige/blood/moon/night/serif/simple/sky/solarized
 trans:		default # default/cube/page/concave/zoom/linear/fade/none
 ---

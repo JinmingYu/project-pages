@@ -3,7 +3,7 @@ layout:     post
 title:      Post Headline
 date:       2015-01-01 12:00:00
 author:     Materials Innovation
-
+categories: blog
 red: <span style="color:red">
 blue: <span style="color:blue">
 green: <span style="color:green">
