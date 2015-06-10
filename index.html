@@ -3,7 +3,7 @@ layout: page
 description: "A Collaborative Research Blog Tool"
 ---
 <!-- for some reason, all the posts appear  -->
-{% for post in site.posts limit:10 %}
+{% for post in site.posts limit:5 %}
     {% if post.categories contains 'blog' %}
     <div class="post-preview">
         <a href="{{ post.url | prepend: site.baseurl }}">
@@ -22,7 +22,9 @@ description: "A Collaborative Research Blog Tool"
     <hr>
     {% endif %}
 {% endfor %}
-
+<Form method="get" action="posts_page.html">
+	<type="submit" value="View All Posts">
+</Form>
 
 <!-- Pager -->
 <!-- {% if paginator.total_pages > 1 %}
